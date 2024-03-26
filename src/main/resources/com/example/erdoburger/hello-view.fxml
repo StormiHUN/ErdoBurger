@@ -20,14 +20,14 @@
             <HBox fx:id="skinSelector" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
             <VBox alignment="CENTER_LEFT" prefWidth="220.0">
                <children>
-                  <RadioButton fx:id="szerverCheck" mnemonicParsing="false" selected="true" text="Szerver vagyok, portom 678">
+                  <RadioButton fx:id="szerverCheck" focusTraversable="false" mnemonicParsing="false" selected="true" text="Szerver vagyok, portom 678">
                      <toggleGroup>
                         <ToggleGroup fx:id="szerver" />
                      </toggleGroup>
                   </RadioButton>
                   <HBox alignment="CENTER_LEFT">
                      <children>
-                        <RadioButton mnemonicParsing="false" text="Kliens vagyok" toggleGroup="$szerver" />
+                        <RadioButton focusTraversable="false" mnemonicParsing="false" text="Kliens vagyok" toggleGroup="$szerver" />
                         <TextField fx:id="clientData" alignment="CENTER" prefWidth="100.0" text="10.201.2.13:678">
                            <HBox.margin>
                               <Insets left="10.0" />
