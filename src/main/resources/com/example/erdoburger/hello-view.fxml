@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onKeyPressed" spacing="5.0" style="-fx-background-color: lightgreen;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.erdoburger.HelloController">
+   <children>
+      <Pane fx:id="pane" onKeyPressed="#onKeyPressed" prefHeight="740.0" prefWidth="980.0" style="-fx-background-color: white; -fx-border-color: black;">
+         <children>
+            <ImageView fx:id="ivPlayer" fitHeight="48.0" fitWidth="48.0" layoutX="58.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/head1.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <HBox maxWidth="1.7976931348623157E308">
+         <children>
+            <HBox fx:id="skinSelector" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+            <VBox alignment="CENTER_LEFT" prefWidth="220.0">
+               <children>
+                  <RadioButton fx:id="szerverCheck" mnemonicParsing="false" selected="true" text="Szerver vagyok, portom 678">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="szerver" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <RadioButton mnemonicParsing="false" text="Kliens vagyok" toggleGroup="$szerver" />
+                        <TextField fx:id="clientData" alignment="CENTER" prefWidth="100.0" text="10.201.2.13:678">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>
